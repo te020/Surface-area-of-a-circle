@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aria Cercului</title>
+	<title>External CSS</title>
+	<link href="Style.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+	<div id="header">
+           <h1> Calcularea ariei unui cerc</h1>
+	</div>
+
+	<div id="content">
+	   <h2> Formule</h2>
+	   <img src="Cerc.png" alt="Cerc" tittle="cerc"/>
+	   <img src="Formule.png" alt="Formule" tittle="Formule"/>
+
+           <p> 
+	     <ul>
+  		<li>c-circumferinta</li>
+ 		<li>d-diametru </li>
+  		<li> A-aria</li>
+  		<li>S'-centrul </li>
+		<li>r-raza </li>
+	     </ul>
+           </p>
+
+	     <h3> Calculator</h3>
+		<label for="Input">Raza cercului este: </label>
+		<input type="text" name="Input" id="myInput" placeholder="enter radius...">
+    		<br>
+       		<br>
+    		<button type="button" onclick="getInputValue();">Calculeaza</button>
+		<br>
+	        <br>
+		<label for="output">Aria cercului este: </label><input type="textbox" name="output"></input>
+ 	
+    	  <script>
+        	function getInputValue(){
+		
+            	  var inputVal = document.getElementById("myInput").value;
+		  		
+		  if(inputVal>0)
+	     		{var result=inputVal*inputVal*Math.PI;
+            		document.getElementsByName('output')[0].value= result;}
+			else alert("Raza trebuie sa fie un numar real pozitiv!");
+       			 }
+   	 </script>
+
+	</div>
+	
+    </body>
+</html>
